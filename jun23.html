@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//task 1
+
+
+let a= {
+    name:prompt("what is your name ?"),
+    age : prompt("what is your age"),
+    department : prompt("department"),
+    salary : prompt ("your salary")
+};
+let b="Employee information "
+console.log(b);
+
+console.log( a);
+
+
+
+//task 2 
+
+console.log("supermarket billing");
+
+let pname=prompt("name of the produtct")
+let pprice=prompt("prce of the product")
+let qty=prompt("quantity of the product")
+let tbill=pprice*qty
+let disper =0
+let famt=0
+
+if(tbill>=3000){
+    disper =20
+} else if (tbill >= 1500){
+    disper =10
+} else {
+    disper =0
+}
+
+
+totalbill=tbill*(1-disper / 100)
+
+console.log("product name : "+pname);
+console.log("product price : "+pprice);
+console.log("quantity : "+qty);
+console.log("total : "+tbill);
+console.log("discount applied : "+ disper+ "%"  );
+console.log("final amount : "+totalbill);
+
+
+
+//task 3
+
+console.log("students mark grade");
+
+let mark = prompt("enter your mark here :")
+let grade;
+
+if (mark < 0 || mark >=100 ){
+    grade = "invalid score";
+} else if (mark >=90) {
+    grade = "a";
+} else if (mark >=80) {
+    grade ="b";
+} else if (mark >=70) {
+    grade = "c";
+} else {
+    grade ="f";
+}
+console.log("Marks :" + mark + ", Grade :" +grade);
+
+
+
+//task 4
+
+
+let name = prompt("User name")
+let accbal =prompt("Enter your account balance")
+let withdrwl = prompt("enter withdrawl amount")
+
+ console.log("Username :"+ name);
+ console.log( "Account Balance :"+accbal);
+ console.log("withdrawal Amount :"+withdrwl);
+ 
+if (withdrwl <= accbal){
+    console.log(" Transaction successfull");
+    
+} else  {
+    console.log("Insufficient Balance");}
+
+
+
+//task 5
+
+console.log("user name and password");
+
+
+let uname = prompt("enter your username")
+let psw = prompt("enter your password")
+
+if (uname == "admin" && psw == "12345") {
+    console.log("Login successfull");
+    
+} else{
+    console.log("invalid credintials");
+    
+}
+
+
+//task 6
+console.log("Display food items");
+
+let aa = ["pizza","burger","frenchfries","sauses","coke"]
+
+console.log(aa[0]);
+console.log(aa[4]);
+console.log(aa.length);
+
+console.log(aa);
+
+
+//task 7
+
+console.log("employee details");
+
+let user={
+    Name:"shalu",
+    Age: "21",
+    Department : "developer",
+    Salary: "12000",
+    Experience: "fresher"
+};
+
+for ( let key in user) {
+    console.log(`${key}: ${user[key]}`);
+    
+}
+
+
+
+
+//task 8
+console.log("TraffiC signals");
+
+let sign = prompt("enter signal color")
+switch (sign) {
+    case "red":
+        console.log("STOP");   
+break;
+
+    case "yellow":
+        console.log("READY");   
+break;
+
+    case "green":
+        console.log("GO"); 
+     break;
+
+    case "":
+        console.log("INVALID SIGNAL");   
+}
+
+
+//task 9
+console.log("age category");
+
+let age=prompt("enter your age")
+
+ if (age <=12){
+    console.log("Child");
+    
+}else if (age <=19){
+    console.log("Teenager");
+    
+}else if (age <=59){
+    console.log("Adult");
+    
+}else if (age >=60){
+    console.log("Senior citizen");
+    
+}
+
+
+//task 10
+
+console.log("Attendane report");
+
+let e_name = prompt("Enter your name")
+let atten = prompt("please enter your attendance status")
+
+atten == "present" ? (console.log("Welcome : "+e_name ), console.log("Attendance : Present"))
+: console.log("Attendane : Absent");
+
+    </script>
+</body>
+</html>
