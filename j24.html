@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// task 1
+
+let employee_detais = [
+    {
+        Name : "Naveen",
+        Id : 101,
+        Salary : 30000.
+    },
+     {
+        Name : "John",
+        Id : 102,
+        Salary : 60000.
+    }
+    
+];
+
+
+
+
+for (let emp of employee_detais){
+console.log(emp);
+}
+
+if (employee_detais[0].Salary <= 40000 ) {
+    console.log("Eligible for bonus");
+} else{
+    console.log("Not eligible for bonus");
+}
+
+if (employee_detais[1].Salary <= 40000 ) {
+    console.log("Eligible for bonus");
+} else{
+    console.log("Not eligible for bonus");
+}
+
+
+
+// task 2
+
+let name = prompt("Enter student name")
+let Tamil = prompt("enter your tamil mark")
+let English = prompt("enter your english mark")
+let maths = prompt("enter your maths mark")
+let  science =prompt("enter your science mark")
+ let Social =prompt("enter your social mark")
+
+    
+console.log("name :"+name,"tamil :"+Tamil,"English:"+English,"maths :"+maths,"sience:"+science,"social:"+Social);
+
+let total = Number(Tamil)+Number(English)+Number(maths)+Number(science)+Number(Social)
+console.log("Total :"+ total);
+
+let percentage = (total / 500)*100
+
+console.log(percentage);
+
+if(total >=90){
+    console.log(total +"=" + "A+");
+}else if (total>= 80){
+    console.log(total +"=" + "A");
+} else if (total>= 70){
+    console.log(total +"=" + "b");
+} else if (total>60){
+    console.log(total +"=" + "c");
+}else{console.log(total +"=" + "Fail");}
+
+
+// task 3
+
+let products=[
+    {name : "Laptop" , Price : 500000 },
+    {Name : "Mouse" , Price : 1000},
+    {Name : "Keyboard" , Price : 20000 }
+];
+
+console.log(products);
+
+function fun(items){
+    let total = items[0].Price + items[1].Price +items[2].Price ;
+    console.log("Total : " +total);
+    if (total > 5000){
+       console.log("discount : 10%");
+       let discount= total - 10/100
+       let total_bill = "total bill : "+ discount
+       console.log(total_bill);
+       
+    }
+    
+}
+fun( products);
+
+// task 4
+
+let unane ="admin"
+let psw = 12345
+
+if (unane == "admin" && psw == 12345) {
+    console.log("Login successful");
+}else{console.log("Invalid credintials");
+}
+
+
+// /task 5
+
+let traffic_input = prompt("Enter the signal color");
+switch (traffic_input){
+case "red": console.log("STOP" );break;
+case "yellow" : console.log("READY"); break;
+case"green": console.log("GO"); break;
+default: console.log("Invalid Signal");}
+
+
+// task 6
+
+let bal= prompt("Enter your balane here")
+let withdraw_amt= prompt("Enter your withdraw amount here")
+let avail_bal= bal-withdraw_amt
+console.log("balance :" + bal);
+console.log("Withdraw amount :" + withdraw_amt);
+console.log("Balance avaliable :" + avail_bal);
+
+if (bal > withdraw_amt){
+    console.log("Transation successfull");
+    
+}else 
+{
+    console.log("Transaction failed");
+    
+}
+
+
+// task 7
+
+function plorder(callback){
+    console.log("order received ");
+    callback()
+}
+function prefood(callback){
+    console.log("food preparing");
+    callback();
+}
+function delfood(){
+    console.log("food delivered");
+    
+}
+
+
+plorder(()=>{
+    prefood(()=>{
+        delfood();
+    });
+});
+
+// task 8
+
+function*gen() {
+    yield"10% cashback"
+    yield"20% cashback"
+    yield"30% cashback"
+    yield"Better luck next time"
+    
+}
+
+let gene = gen()
+console.log(gene.next().value);
+console.log(gene.next().value);
+console.log(gene.next().value);
+console.log(gene.next().value);
+
+
+// task 9
+
+let age = prompt("enter your age here")
+let weight = prompt("enter your weight here")
+
+console.log("age :"+age);
+console.log("weight : "+weight);
+
+if(age>18){
+    if (weight>50){
+        console.log( "Eligibble for treatment");
+    }else {
+        console.log( " weight Not eligible");
+        }}
+        else {console.log("age is not eligible");
+        
+    }
+
+
+//task 10
+
+let add_emp =[
+    {
+        Name : "naveen",
+        Id : 101,
+        Salary : 21500.
+    },
+    {
+        Name : "John",
+        Id : 102,
+        Salary : 22500.
+    }
+];
+
+for (let empp of add_emp){
+    console.log(empp);
+    
+}
+
+console.log(add_emp);
+
+
+if (add_emp[0].Salary < 60000){
+    console.log("eligible for bonus");
+    
+}else {console.log("not eligible");}
+
+
+ if (add_emp[1].Salary < 60000){
+    console.log("eligible for bonus");
+    
+}else {console.log("not eligible"); }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
