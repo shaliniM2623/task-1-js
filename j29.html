@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//task 1
+
+function empSalary(){
+    console.log("Employee yearly salary = "+ 45000*12);
+    
+}
+
+empSalary()
+
+// task 2
+let mark = 72
+
+function passfail(){
+    if (mark >=35){
+    console.log(mark+ "=" +"Pass");
+    } else {
+        console.log(mark +"="+"Fail");
+    }}
+
+passfail()
+
+//task 3
+
+let burgerprice = 180
+let qty =3
+let total = burgerprice*qty
+
+console.log("Total Bill = " + total);
+
+//task 4
+
+let empName = "Naveen"
+let dept = "Development"
+
+function welempy(){
+    console.log("Welcome "+empName);
+    console.log("Department :"+dept);
+    
+}
+
+welempy()
+
+
+//task 5
+
+let bill = 5000
+let dis = 10 +"%"
+let totbill= bill * 10/100
+tottbill = bill-totbill
+console.log("Billvalue :"+ bill);
+console.log("Disount ="+ dis);
+
+console.log("total bill : "+ tottbill);
+
+//task 6
+
+function login(){
+console.log("Login sucessfull");
+console.log("Loading Dashboard...");
+}
+login()
+
+//task 7
+function ordrec(){
+    console.log("Order received");
+    
+}
+
+function prefood(){
+    console.log("Preparing food");
+    
+}
+
+function outdel(){
+    console.log("Out for Delivery");
+    
+}
+
+function del(){
+    console.log("Delivered");
+    
+}
+
+del(outdel(prefood(ordrec())))
+
+
+//task 8
+function*coupon(){
+    yield "10%"
+    yield "20%"
+    yield "30%"
+    yield "Better Luck Next Time"
+}
+
+let cashback=coupon()
+console.log(cashback.next().value);
+console.log(cashback.next().value);
+console.log(cashback.next().value);
+console.log(cashback.next().value);
+
+
+//task 9
+
+let bonus1=50000
+let bonus2=5000
+let totall = bonus1 + bonus2
+
+console.log("Total Salary : "+ totall);
+
+
+//task 10
+let emppersonal = [{
+    name : "shalini",
+    age : 21,
+    location : "erode"
+}]
+let empoffice =[
+{
+    name : "shalini",
+    id : 101
+
+}]
+
+let empdetal = [...emppersonal,...empoffice]
+console.log(empdetal);
+
+
+//task 11
+let cart1= ["apple", "organe" , "pineapple" , "mango"]
+let cart2 = ["iphone" , "samsung" , "oppo" , "poco"]
+
+let tot=[...cart1,...cart2]
+console.log(tot);
+
+//task 12
+
+function studentdetail(a,...b){
+console.log("student :"+ a);
+let total = (b[0]+b[1]+b[2]+b[3])
+console.log("Total marks :"+ total);
+console.log("Average : " + total / 4 );
+
+}
+
+studentdetail("naveen",90,85,88,95)
+
+
+//task 13
+
+let things ={
+    Name  : " laptop",
+Price : 65000,
+Brand : "Dell",
+Stock : 20
+}
+
+let{Name,Price,Brand,Stock} = things
+console.log("Name :" + Name);
+console.log("Prie :" +Price);
+
+
+//task 14
+
+let arry1 =[101,"Naveen","Chennai",9876543210]
+
+let [a1,a2,a3,a4] = arry1
+console.log("ID :"+a1);
+console.log("Name :" + a2);
+console.log("City :"+a3);
+
+
+//task 15
+
+let arry2 =["Mobile","Laptop"]
+ arry2.push("Headphone")
+console.log(arry2);
+
+//task 16
+
+arry2.pop()
+console.log(arry2);
+
+//task 17
+
+let arry3 =["Rahul","Arun","John","David"]
+arry3.splice(2,1,"Naveen")
+console.log(arry3);
+
+//task 18
+
+let arry5 =["Mouse","Keyboard","Monitor","Laptop"]
+console.log(arry5.includes("Laptop"));
+
+//task 19
+
+let arry6= [25000,45000,30000,70000]
+console.log(arry6.sort());
+
+//task 20
+
+let arry7=["Hi","Hello","How are you?","Good morning"]
+console.log(arry7.reverse());
+
+//task bonus
+
+function addemp(){
+    let addemp ={name : "naveen" ,id : 101,salary : 25000}
+  
+   return addemp; 
+  
+}
+let employee = addemp();
+console.log(employee);
+
+
+
+ let salry = 25000
+   let bons = 5000
+   let totsal = salry+bons
+console.log("Total salary :"+totsal);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
