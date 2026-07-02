@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//task 1
+
+let employees = [
+    {
+        name :"Naveen",
+        id :101,
+        salary : 30000
+    },
+    {
+        name :"John",
+        id :102,
+        salary : 60000
+    },
+    {
+        name:"arun",
+        id :103,
+        salary :45000
+    }
+];
+
+let highsal= employees.reduce((max, emp)=> emp.salary>max.salary ? emp : max, employees[0]);
+console.log(`Highest salary : ${highsal.salary},
+Employee Name :  ${highsal.name}`);
+
+
+//task 2
+
+let employes = [
+    {
+        name :"Naveen",
+        id :101,
+        salary : 30000
+    },
+    {
+        name :"John",
+        id :102,
+        salary : 60000
+    },
+    {
+        name:"arun",
+        id :103,
+        salary :45000
+    }
+];
+
+
+function searchid(id){
+    let employee = employees.find(emp=> emp.id=== id);
+
+    if(employee){
+        console.log(`Employee found 
+Name :${employee.name}
+Salary :${employee.salary}` );
+    }else{
+        console.log("Employee not found");
+        
+    }
+}
+searchid(101)
+
+
+//task 3
+let employees1 = [
+    {
+        name :"Naveen",
+        id :101,
+        salary : 30000
+    },
+    {
+        name :"John",
+        id :102,
+        salary : 60000
+    },
+    {
+        name:"arun",
+        id :103,
+        salary :45000
+    }
+];
+
+
+let bonusadd= employees1.map(emp => {
+    return{
+        name: emp.name,
+        salary : emp.salary+5000
+    }
+});
+
+console.log(bonusadd);
+
+//task 4
+
+let employees2 = [
+    {
+        name :"Naveen",
+        id :101,
+        salary : 30000,
+        experience :2
+    },
+    {
+        name :"John",
+        id :102,
+        salary : 60000,
+        experience:7
+
+    },
+    {
+        name:"arun",
+        id :103,
+        salary :45000,
+        experience:5
+    }
+];
+
+
+function experience(id){
+    id.forEach(emp =>  {
+   
+    if(emp.experience>=5){
+        console.log(`${emp.name} - senior Employee` );
+    }else{
+        console.log(`${emp.name} -Junior Employee`);
+        
+}})
+};
+experience(employees2)
+
+//task 5
+   
+employees2.forEach(emp =>{
+    console.log(emp.name);
+    
+})
+
+
+//task 6
+
+employees2.forEach(emp =>{
+    console.log(emp.id);
+})
+
+//task 7
+
+let totalsalary= employees2.reduce((sum,emp)=> sum+emp.salary,0);
+console.log("Total Salary paid :", totalsalary);
+
+
+//task 8
+
+employees2.forEach(emp =>{
+    if(emp.salary > 40000){
+    console.log(`${emp.name}`);
+}
+
+})
+
+//task 9
+
+let increment = employees2.map(emp=>{
+   console.log(`${emp.name}:${emp.salary}`);
+   
+});
+
+//task 10
+
+let employees3 = [
+    {
+        name :"Naveen",
+        id :101,
+        salary : 30000,
+        experience :2
+    },
+    {
+        name :"John",
+        id :102,
+        salary : 60000,
+        experience:7
+
+    },
+    {
+        name:"arun",
+        id :103,
+        salary :45000,
+        experience:5
+    }
+];
+console.log(`Employee Details:`)
+employees3.forEach(emp => {
+
+console.log(`name:${emp.name}
+id:${emp.id}
+salary:${emp.salary}`
+    );
+})
+
+//task 10
+console.log(`Total Employee : ${employees3.length}`);
+
+let highgsal= employees.reduce((max, emp)=> emp.salary>max.salary ? emp : max, employees[0]);
+console.log(`Highest salary : ${highgsal.salary}
+`);
+
+let lowsal= employees.reduce((min, emp)=> emp.salary<min.salary ? emp : min, employees[0]);
+console.log(`Lowest Salary : ${lowsal.salary}`);
+
+let totalsalary1= employees3.reduce((sum,emp)=> sum+emp.salary,0);
+console.log("Total Salary paid :", totalsalary);
+
+let highgsal1= employees.reduce((max, emp)=> emp.salary>max.salary ? emp : max, employees[0]);
+console.log(`Highest salary : ${highgsal1.name}
+`);
+
+let lowsal1= employees.reduce((min, emp)=> emp.salary<min.salary ? emp : min, employees[0]);
+console.log(`Lowest Salary : ${lowsal1.name}`);
+
+employees3.forEach(emp =>{
+    if(emp.salary > 40000){
+    console.log(`${emp.name}`);
+}
+
+})
+
+function searchid(id){
+    let employee = employees.find(emp=> emp.id=== id);
+
+    if(employee){
+        console.log(`Employee found 
+Name :${employee.name}
+Salary :${employee.salary}` );
+    }else{
+        console.log("Employee not found");
+        
+    }
+}
+searchid(101)
+
+let bonusadd1= employees3.map(emp => {
+    return{
+        name: emp.name,
+        salary : emp.salary+5000
+    }
+});
+
+console.log(bonusadd);
+
+console.log(`Employee Details:`)
+employees3.forEach(emp => {
+
+console.log(`name:${emp.name}
+id:${emp.id}
+salary:${emp.salary}`
+    );
+})
+
+
+
+
+
+    </script>
+</body>
+</html>
